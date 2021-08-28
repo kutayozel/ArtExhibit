@@ -2,21 +2,21 @@ import React from 'react'
 import Rating from './Rating'
 
 export default function Cini(props) {
-    const {item} = props
+    const {product} = props
     return (
-        <div key={item.id} className="card">
-            <a href={`/product/${item.id}`}>
-                <img className="medium" src={item.image} alt={item.name} />
+        <div key={product.id} className="card">
+            <a href={`/product/${product.id}`}>
+                <img className="medium" src={product.image} alt={product.name} />
             </a>
             <div className="card-body">
-                <a href={`/product/${item.id}`}>
-                    <h2>{item.name}</h2>
+                <a href={`/product/${product.id}`}>
+                    <h2>{product.name}</h2>
                 </a> 
                 <Rating 
-                    rating={item.rating} 
-                    numReviews={item.numReviews}>
+                    rating={product.rating} 
+                    numReviews={product.numReviews}>
                 </Rating>
-                <div className="price">${item.price} </div>
+                <div className="price">${product.price} </div>
             </div>
         </div>
     )
