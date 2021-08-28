@@ -54,13 +54,21 @@ ul {
 li {
   margin-top: 1rem;
 }
+input,
+select,
+textarea,
 button {
   padding: 1rem;
   border-radius: 0.5rem;
   border: 0.1rem #a4a4a4 solid;
   font-size: 1.6rem;
+}
+button {
   background-color: #f0c040;
 }
+input:hover,
+select:hover,
+textarea:hover,
 button:hover {
   cursor: pointer;
   background-color: rgb(90, 61, 61);
