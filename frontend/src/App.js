@@ -1,26 +1,29 @@
-/*rating component
-cart page
-signin page
-item card component
-product page
-product component*/
 import React from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Link } from "react-router-dom";
 import ProductScreen from "./pages/ProductScreen";
 import HomeScreen from "./pages/HomeScreen";
 import CartScreen from "./pages/CartScreen";
+import { useSelector } from "react-redux";
 
 function App() {
+
+  const cart = useSelector(state => state.cart)
+  const {cartItems} = cart
+
   return (
     <BrowserRouter>
       <div className="grid-container">
         <header className="row">
           <div>
-            <a href="/" className="brand">ÇiniArts</a>
+            <Link to="/" className="brand">ÇiniArts</Link>
           </div>
           <div>
-            <a href="/cart">Cart</a>
-            <a href="/signin">Sign in</a>
+            <Link to="/cart">Cart
+              {cartItems.length > 0 && 
+                (<span className="badge">{cartItems.length}</span>)
+              }
+            </Link>
+            <Link to="/signin">Sign in</Link>
           </div>
         </header>
         <main>
