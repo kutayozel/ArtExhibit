@@ -164,6 +164,9 @@ img.large {
 }
 
 /*Alert*/
+.loading{
+  display: block !important;
+}
 .success {
   color: green;
 }
